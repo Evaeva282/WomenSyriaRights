@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حقوق المرأة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin: 20px 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: all 0.3s ease; /* إضافة تأثير انتقالي عند التفاعل */
+        }
+
+        .card h2 {
+            color: #34495e;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .card ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style: disc;
+        }
+
+        .card ul li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        /* تأثير عند مرور المؤشر على البطاقة */
+        .card:hover {
+            transform: translateY(-5px); /* دفع البطاقة للأمام */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* زيادة تأثير الظل */
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .card {
+                flex: 0 1 calc(48% - 10px); /* Two cards per row */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>حقوق المرأة</h1>
+
+    <div class="container">
+        <!-- البطاقة الأولى: حقوق المرأة في قانون الإرث -->
+        <div class="card">
+            <h2>حقوق المرأة في قانون الإرث</h2>
+            <ul>
+                <li>يستحق الإرث بموت المورث أو باعتباره ميتاً بحكم القاضي.</li>
+                <li>يجب لاستحقاق الإرث تحقق حياة الوارث وقت موت المورث أو وقت الحكم باعتباره ميتاً، ويكون الحمل مستحقاً للإرث إذا توافر فيه ما نص عليه في المادة 236.</li>
+                <li><strong>المادة 261:</strong> إذا مات اثنان ولم يعلم أيهما مات أولاً، فلا استحقاق لأحدهما في تركة الآخر سواء أكان موتهما في حادث واحد أم لا.</li>
+                <li><strong>المادة 262:</strong> يتم توزيع التركة بالترتيب التالي:
+                    <ul>
+                        <li>ما يكفي لتجهيز الميت ومن تلزمه نفقته من الموت إلى الدفن بالقدر المشروع.</li>
+                        <li>ديون الميت.</li>
+                        <li>الوصية الواجبة.</li>
+                        <li>الوصية الاختيارية.</li>
+                        <li>المواريث بحسب ترتيبها في هذا القانون.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- البطاقة الثانية: حقوق المرأة في قانون الزواج والطلاق -->
+        <div class="card">
+            <h2>حقوق المرأة في قانون الزواج والطلاق</h2>
+            <ul>
+                <li><strong>المادة 1:</strong> الزواج عقد بين رجل وامرأة غايته إنشاء رابطة للحياة المشتركة والنسل.</li>
+                <li><strong>المادة 4:</strong> يحق للخاطب استرداد المهر أو قيمته عند العدول عن الخطبة وفق الشروط المحددة.</li>
+                <li><strong>المادة 12:</strong> يشترط في صحة عقد الزواج حضور شاهدين (رجلين أو رجل وامرأتين).</li>
+                <li><strong>المادة 16:</strong> تكمل أهلية الزواج في الفتى والفتاة ببلوغ الثامنة عشرة من العمر.</li>
+                <li><strong>المادة 20:</strong> يحق للمرأة التي لم تتزوج وبلغت 18 عامًا الزواج بإذن القاضي في حال عدم اعتراض الولي أو اعتراضه غير المبرر.</li>
+            </ul>
+        </div>
+
+        <!-- البطاقة الثالثة: حقوق المرأة في قانون العمل -->
+        <div class="card">
+            <h2>حقوق المرأة في قانون العمل</h2>
+            <ul>
+                <li><strong>المادة 130:</strong> تسري على النساء العاملات جميع النصوص المنظمة لتشغيل العمال دون تمييز.</li>
+                <li>القانون يراعي خصائص المرأة بمنع عملها ليلاً أو في الأعمال الضارة صحياً وأخلاقياً إلا بقرار خاص.</li>
+                <li>إجازة أمومة مدفوعة الأجر: 120 يوماً للطفل الأول، 90 يوماً للثاني، و75 يوماً للثالث.</li>
+                <li>عدم جواز فصل العاملة بسبب الحمل أو الولادة أو المرض المرتبط بهما.</li>
+                <li>توفير دار حضانة إذا كان عدد العاملات 100 أو أكثر في مكان واحد.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

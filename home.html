@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حقوق المرأة السورية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* إعدادات النصوص لتكون من اليمين لليسار */
+        body, .navbar, .footer {
+            direction: rtl;
+        }
+
+        /* خلفية الموقع */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            background-image: url('img/background.jpg'); /* قم بتغيير المسار إلى صورة الخلفية التي ترغب فيها */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* تنسيق شريط التنقل */
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        /* تنسيق الفوتر */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* تنسيق بطاقة العرض لتكون بشكل ثلاثي الأبعاد */
+        .card {
+            margin-bottom: 20px;
+            perspective: 1000px;
+        }
+
+        .card-body {
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            padding: 20px;
+        }
+
+        .card:hover .card-body {
+            transform: rotateY(15deg);
+        }
+
+        /* تنسيق شعار الموقع */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        /* تنسيق محتويات الفوتر */
+        .footer .container div {
+            width: 22%;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        /* تنسيق النص داخل البطاقة */
+        .card-text, .card-title {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="img/logo.png" alt="Logo"> 
+                حقوق المرأة السورية
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rights.html">حقوقك</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="women_world.html">المرأة عالمياً</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legal_consultations.html">استشارات قانونية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">المنتدى</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center mb-4">مرحباً بك في موقع حقوق المرأة السورية</h1>
+        <p class="text-center">هذا الموقع يهدف إلى تعزيز وعي المرأة السورية بحقوقها القانونية وتقديم الدعم اللازم لها في جميع المجالات.</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">حقوقك</h5>
+                        <p class="card-text">تعرفي على حقوقك القانونية في مختلف المجالات، بما في ذلك العمل، الزواج، والطلاق.</p>
+                        <a href="rights.html" class="btn btn-primary">المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">المرأة عالمياً</h5>
+                        <p class="card-text">قصص وتجارب نساء من مختلف أنحاء العالم في نضالهن لتحقيق العدالة والمساواة.</p>
+                        <a href="women_world.html" class="btn btn-primary">المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">استشارات قانونية</h5>
+                        <p class="card-text">تواصلي مع محامين مختصين للحصول على استشارات قانونية مباشرة.</p>
+                        <a href="legal_consultations.html" class="btn btn-primary">المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h5>مواقع صديقة</h5>
+                <ul>
+                    <li><a href="http://ncw.gov.eg/" target="_blank">المجلس القومي للمرأة</a></li>
+                    <li><a href="https://www.unwomen.org/en/about-us/about-un-women" target="_blank">UN Women</a></li>
+                    <li><a href="https://www.feminist.com/" target="_blank">Feminist.com</a></li>
+                    <li><a href="http://haqqi.info/" target="_blank">Haqqi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>حول الموقع</h5>
+                <p>موقع حقوق المرأة السورية هو منصة تهدف إلى نشر الوعي حول حقوق المرأة وتعزيز المساواة بين الجنسين في المجتمع السوري.</p>
+            </div>
+            <div>
+                <h5>للتواصل معنا</h5>
+                <p>البريد الإلكتروني: <a href="mailto:info@womensrights.sy">info@womensrights.sy</a></p>
+                <p>يمكنك التواصل عبر صفحاتنا على مواقع التواصل الاجتماعي.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

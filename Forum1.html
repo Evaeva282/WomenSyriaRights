@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتدى - نقاشات جماعية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .forum-post {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+        .forum-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .forum-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .forum-content {
+            margin-top: 10px;
+        }
+        .btn-reply {
+            margin-top: 10px;
+        }
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">حقوق المرأة السورية</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rights.html">حقوقك</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="forum.html">المنتدى</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center mb-5">منتدى نقاش جماعي</h1>
+
+        <div class="row">
+            <div class="col-md-8">
+                <!-- موضوع النقاش 1 -->
+                <div class="forum-post">
+                    <h3 class="forum-title">حقوق المرأة في سوريا - التحديات والحلول</h3>
+                    <p class="forum-meta">بواسطة: أحمد الجاسم | تاريخ: 28 يناير 2025 | الردود: 5</p>
+                    <div class="forum-content">
+                        <p>يتعرض النساء في سوريا للعديد من التحديات في مختلف المجالات مثل التعليم، العمل، الحقوق القانونية، وغيرها. كيف يمكن تحقيق العدالة والمساواة للمرأة السورية؟</p>
+                        <a href="#" class="btn btn-primary btn-reply">رد على الموضوع</a>
+                    </div>
+                </div>
+
+                <!-- موضوع النقاش 2 -->
+                <div class="forum-post">
+                    <h3 class="forum-title">التعليم والمساواة بين الجنسين</h3>
+                    <p class="forum-meta">بواسطة: فاطمة الزهراء | تاريخ: 25 يناير 2025 | الردود: 10</p>
+                    <div class="forum-content">
+                        <p>التعليم هو أحد العوامل الرئيسية التي يمكن أن تساهم في تحقيق المساواة بين الجنسين. كيف يمكن تحسين الوصول إلى التعليم للفتيات في المناطق الريفية؟</p>
+                        <a href="#" class="btn btn-primary btn-reply">رد على الموضوع</a>
+                    </div>
+                </div>
+
+                <!-- إضافة موضوع جديد -->
+                <div class="mt-5">
+                    <h3>إضافة موضوع جديد</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="topicTitle" class="form-label">عنوان الموضوع</label>
+                            <input type="text" class="form-control" id="topicTitle" placeholder="اكتب عنوان الموضوع">
+                        </div>
+                        <div class="mb-3">
+                            <label for="topicContent" class="form-label">محتوى الموضوع</label>
+                            <textarea class="form-control" id="topicContent" rows="5" placeholder="اكتب تفاصيل الموضوع هنا"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">إضافة الموضوع</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- الشريط الجانبي -->
+            <div class="col-md-4 sidebar">
+                <h4>أحدث المواضيع</h4>
+                <ul>
+                    <li><a href="#">حقوق المرأة في التعليم</a></li>
+                    <li><a href="#">المساواة في العمل</a></li>
+                    <li><a href="#">الحقوق القانونية للنساء</a></li>
+                    <li><a href="#">دور المرأة في المجتمع المدني</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2025 - موقع حقوق المرأة السورية</p>
+            <p>للتواصل معنا: info@womensrights.sy</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
