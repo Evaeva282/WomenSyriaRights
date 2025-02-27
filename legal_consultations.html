@@ -6,26 +6,200 @@
     <title>استشارات قانونية</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
+         body, .navbar, .footer {
+            direction: rtl;
         }
+          body {
+            background-image: url('img/background.jpg'); /* مسار الصورة هنا */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+
+        }
+
         .navbar {
             margin-bottom: 20px;
         }
+
         .footer {
             background-color: #343a40;
             color: white;
             padding: 20px 0;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
+            width: 100%;
         }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
         .card {
             margin-bottom: 20px;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            border-radius: 8px; /* إضافة تدوير للزوايا */
         }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* تأثير الظل عند التمرير */
+        }
+
+        .card-body img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50px 50px 0 0; /* تحسين تنسيق الصورة */
+        }
+
         .section-title {
             margin-bottom: 30px;
         }
+
+        .consultation-section {
+            margin-top: 40px;
+        }
+
+        .consultation-card {
+            margin-bottom: 20px;
+        }
+
+        /* تحسين التنسيق للصفوف */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .col-md-4 {
+            flex: 1 1 calc(33.333% - 20px);
+        }
+
+        @media (max-width: 768px) {
+            .col-md-4 {
+                flex: 1 1 100%; 
+            }
+        }
+
+        /* تحسين تنسيق الاستشارات */
+        .consultation-card .card-body {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .consultation-card .card-footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .consultation-card .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* الأنيميشون */
+        .consultation-card .card-body {
+            opacity: 0;
+            animation: fadeIn 0.6s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .animated-title {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+        /* Styling for the navigation buttons */
+.pagination-buttons button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.pagination-buttons button:hover {
+    background-color: #198be3; /* Slightly darker blue */
+}
+
+/* Add some margin and center the buttons */
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/* الأنيمشن الخاص بالعنوان */
+.section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #343a40;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل للنص */
+        transition: color 0.3s ease, transform 0.3s ease; /* إضافة تأثير الحركة عند التمرير */
+        margin-bottom: 30px;
+    }
+
+    .section-title:hover {
+        color: #007bff; /* تغيير اللون عند التمرير */
+        transform: translateX(10px); /* إضافة حركة صغيرة للنص عند التمرير */
+    }
+
+    /* الأنيمشن عند تحميل الصفحة */
+    @keyframes fadeInTitle {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .section-title {
+        animation: fadeInTitle 1s ease-out forwards; /* إضافة الأنيمشن عند تحميل الصفحة */
+    }
+    .social-icons a {
+        margin-right: 10px;
+    }
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50px 50px;
+    }
+
     </style>
 </head>
 <body>
@@ -61,46 +235,129 @@
     </nav>
 
     <div class="container">
-        <h1 class="text-center section-title">استشارات قانونية</h1>
+        <h1 class="text-center section-title animated-title">استشارات قانونية</h1>
 
+        <!-- Displaying Lawyers Cards -->
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="img/Avatar.png" class="card-img-top" alt=" = ">
                     <div class="card-body">
+                        <img src="img/Avatar.png" class="card-img-top" alt="المحامية ليلى الحجار">
                         <h5 class="card-title">المحامية ليلى الحجار</h5>
                         <p class="card-text">مزة شرقية، جانب جامع الأكرم</p>
                         <p class="card-text"><strong>رقم الهاتف:</strong> 00963991101576</p>
                     </div>
+                    <div class="card-footer">
+                        <p>لديها خبرة واسعة في مجال قضايا الأسرة والميراث.</p>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card">
-                    <img src="img/Avatar.png" class="card-img-top" alt=" ">
                     <div class="card-body">
+                        <img src="img/Avatar.png" class="card-img-top" alt="المحامية سارة معلم">
                         <h5 class="card-title">المحامية سارة معلم</h5>
                         <p class="card-text">عنوان غير محدد</p>
                         <p class="card-text"><strong>رقم الهاتف:</strong> 00963933522664</p>
                     </div>
+                    <div class="card-footer">
+                        <p>متخصصة في قضايا العنف الأسري وحقوق المرأة.</p>
+                    </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card">
-                    <img src="img/Avatar.png" class="card-img-top" alt="  ">
                     <div class="card-body">
+                        <img src="img/Avatar.png" class="card-img-top" alt="المحامية آية شربجي">
                         <h5 class="card-title">المحامية آية شربجي</h5>
                         <p class="card-text">أبو رمانة، مقابل حديقة الجاحظ</p>
                         <p class="card-text"><strong>رقم الهاتف:</strong> 00963988192532</p>
                     </div>
+                    <div class="card-footer">
+                        <p>خبرة في القضايا الجنائية والحقوق المدنية.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="consultation-section">
+            <h2 class="section-title">الاستشارات السابقة</h2>
+            <div class="row">
+                <!-- استشارة 1 -->
+                <div class="col-md-6 consultation-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">استشارة: كيف يمكنني الحصول على الطلاق؟</h5>
+                            <p class="card-text">السؤال: ما هي الإجراءات المطلوبة للحصول على الطلاق في سوريا؟</p>
+                            <p class="card-text"><strong>المحامية:</strong> ليلى الحجار</p>
+                            <p><strong>إجابة المحامية:</strong> يجب تقديم طلب الطلاق أمام المحكمة المختصة واتباع الإجراءات القانونية اللازمة.</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>تمت الإجابة من قبل المحامية ليلى الحجار.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- استشارة 2 -->
+                <div class="col-md-6 consultation-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">استشارة: كيف أستطيع حماية حقوقي في حالة الطلاق؟</h5>
+                            <p class="card-text">السؤال: هل يمكنني الحصول على نفقة بعد الطلاق؟</p>
+                            <p class="card-text"><strong>المحامية:</strong> سارة معلم</p>
+                            <p><strong>إجابة المحامية:</strong> نعم، يمكن للمحكمة أن تقرر النفقة بناءً على وضع الطرفين المالي.</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>تمت الإجابة من قبل المحامية سارة معلم.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="pagination-buttons text-center mb-4">
+        <button class="btn btn-primary me-3" onclick="window.location.href='rights.html'">السابق</button>
+        <button class="btn btn-primary" onclick="window.location.href='news.html'">التالي</button>
+    </div>
     <footer class="footer">
         <div class="container">
-            <p>جميع الحقوق محفوظة &copy; 2025 - موقع حقوق المرأة السورية</p>
-            <p>للتواصل معنا: info@womensrights.sy</p>
+            <div>
+                <h5>مواقع صديقة</h5>
+                <ul>
+                    <li><a href="http://ncw.gov.eg/" target="_blank">المجلس القومي للمرأة</a></li>
+                    <li><a href="https://www.unwomen.org/en/about-us/about-un-women" target="_blank">UN Women</a></li>
+                    <li><a href="https://www.feminist.com/" target="_blank">Feminist.com</a></li>
+                    <li><a href="http://haqqi.info/" target="_blank">Haqqi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>حول الموقع</h5>
+                <p>موقع حقوق المرأة السورية هو منصة تهدف إلى نشر الوعي حول حقوق المرأة وتعزيز المساواة بين الجنسين في المجتمع السوري.</p>
+            </div>
+            <div>
+                <h5>للتواصل معنا</h5>
+                <p>البريد الإلكتروني: <a href="mailto:info@womensrights.sy">info@womensrights.sy</a></p>
+                <p>يمكنك التواصل عبر صفحاتنا على مواقع التواصل الاجتماعي.</p>
+                <!-- إضافة أيقونات التواصل الاجتماعي -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="img/facebook-icon.png" alt="Facebook" />
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="img/twitter-icon.png" alt="Twitter" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="img/instagram-icon.png" alt="Instagram" />
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="img/linkedin-icon.png" alt="LinkedIn" />
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 

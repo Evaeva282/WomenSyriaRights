@@ -3,126 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حقوق المرأة</title>
+    <title>حقوق المرأة في القوانين السورية</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            line-height: 1.8;
-        }
-
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin: 20px 0;
-            font-size: 2rem;
+        body,  .footer {
+            direction: rtl;
         }
 
         .container {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
             padding: 20px;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: auto;
         }
-
+    
         .card {
             background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            transition: all 0.3s ease; /* إضافة تأثير انتقالي عند التفاعل */
+            gap: 15px;
+            transition: 0.3s ease;
+            width: 100%;
+            max-width: 550px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
-
+    
         .card h2 {
             color: #34495e;
+            font-size: 1.8rem;
             margin-bottom: 10px;
-            font-size: 1.5rem;
         }
-
+    
         .card ul {
-            margin: 0;
             padding-left: 20px;
-            list-style: disc;
+            list-style: none;
         }
-
+    
         .card ul li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: #555;
+            position: relative;
+            padding-right: 15px;
         }
-
-        /* تأثير عند مرور المؤشر على البطاقة */
+    
+        .card ul li::before {
+            content: "✔";
+            position: absolute;
+            right: 0;
+            color: #27ae60;
+            font-size: 1.2rem;
+        }
+    
         .card:hover {
-            transform: translateY(-5px); /* دفع البطاقة للأمام */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* زيادة تأثير الظل */
+            transform: translateY(-8px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+        }
+    
+        body, .navbar, .footer {
+            direction: rtl;
         }
 
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+        /* خلفية الموقع */
+        body {
+            background-image: url('img/background.jpg'); /* مسار الصورة هنا */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
 
-            .card {
-                flex: 0 1 calc(48% - 10px); /* Two cards per row */
-            }
         }
+
+        /* تنسيق شريط التنقل */
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        /* جعل الشعار دائرياً */
+        .navbar-brand img {
+            border-radius: 50%;
+            width: 95px;
+            height: 95px;
+        }
+
+        /* تنسيق الفوتر */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+                /* تنسيق الفوتر */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+
+    /* Styling for the navigation buttons */
+.pagination-buttons button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.pagination-buttons button:hover {
+    background-color: #198be3; /* Slightly darker blue */
+}
+
+/* Add some margin and center the buttons */
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.animated-heading {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 3rem;
+    margin: 50px 0;
+    font-family: 'Tajawal', sans-serif;
+    animation: slideIn 2s ease-out forwards;
+}
+
+/* Animation for sliding in from the bottom */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.social-icons a {
+        margin-right: 10px;
+    }
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50px 50px;
+    }
     </style>
 </head>
 <body>
-    <h1>حقوق المرأة</h1>
 
+
+
+    
+
+    <h1 class="animated-heading">حقوق المرأة في القوانين السورية</h1>
+
+  
     <div class="container">
-        <!-- البطاقة الأولى: حقوق المرأة في قانون الإرث -->
+        <div class="card">
+            <h2>حقوق المرأة في الدستور السوري</h2>
+            <ul>
+                <li><strong>المادة 44:</strong> الأسرة هي خلية المجتمع الأساسية وتحميها الدولة.</li>
+                <li><strong>المادة 45:</strong> تكفل الدولة للمرأة جميع الفرص للمشاركة الفعالة في الحياة السياسية والاجتماعية والاقتصادية.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>حقوق المرأة في قانون الجنسية</h2>
+            <ul>
+                <li><strong>المادة 3/1:</strong> يعتبر عربيًا سوريًا من ولد لأب سوري.</li>
+                <li><strong>المادة 3/ب:</strong> يعتبر سوريًا من ولد لأم سورية ولم تثبت نسبته لأبيه.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>حقوق المرأة في قانون الأحوال الشخصية</h2>
+            <ul>
+                <li><strong>المادة 16:</strong> يشترط في الزواج أن يكون الخاطب قد أتم 18 سنة والمخطوبة 17 سنة.</li>
+                <li><strong>المادة 18:</strong> يمكن للقاضي الإذن بزواج المراهقين وفق ضوابط معينة.</li>
+                <li><strong>المادة 170 و172:</strong> تكون الولاية المالية على القاصر للأب ثم الجد العصبي.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>حقوق المرأة في قانون العقوبات</h2>
+            <ul>
+                <li><strong>المادة 548:</strong> أحكام متعلقة بجرائم الشرف والعقوبات المخففة في بعض الحالات.</li>
+                <li><strong>المادة 473:</strong> اختلاف عقوبة الزنا بين الرجل والمرأة.</li>
+                <li><strong>المادة 489:</strong> عقوبة مشددة للاغتصاب تصل إلى 21 سنة في بعض الحالات.</li>
+                <li><strong>المادة 506:</strong> عقوبة التحرش الجنسي تشمل الغرامة أو السجن.</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h2>حقوق المرأة في قانون الإرث</h2>
             <ul>
-                <li>يستحق الإرث بموت المورث أو باعتباره ميتاً بحكم القاضي.</li>
-                <li>يجب لاستحقاق الإرث تحقق حياة الوارث وقت موت المورث أو وقت الحكم باعتباره ميتاً، ويكون الحمل مستحقاً للإرث إذا توافر فيه ما نص عليه في المادة 236.</li>
-                <li><strong>المادة 261:</strong> إذا مات اثنان ولم يعلم أيهما مات أولاً، فلا استحقاق لأحدهما في تركة الآخر سواء أكان موتهما في حادث واحد أم لا.</li>
-                <li><strong>المادة 262:</strong> يتم توزيع التركة بالترتيب التالي:
-                    <ul>
-                        <li>ما يكفي لتجهيز الميت ومن تلزمه نفقته من الموت إلى الدفن بالقدر المشروع.</li>
-                        <li>ديون الميت.</li>
-                        <li>الوصية الواجبة.</li>
-                        <li>الوصية الاختيارية.</li>
-                        <li>المواريث بحسب ترتيبها في هذا القانون.</li>
-                    </ul>
-                </li>
+                <li><strong>المادة 261:</strong> في حال وفاة شخصين معًا دون معرفة من مات أولاً، لا يرث أحدهما الآخر.</li>
+                <li><strong>المادة 262:</strong> توزيع التركة يشمل تجهيز المتوفى وسداد ديونه قبل توزيعها على الورثة.</li>
             </ul>
         </div>
 
-        <!-- البطاقة الثانية: حقوق المرأة في قانون الزواج والطلاق -->
         <div class="card">
             <h2>حقوق المرأة في قانون الزواج والطلاق</h2>
             <ul>
-                <li><strong>المادة 1:</strong> الزواج عقد بين رجل وامرأة غايته إنشاء رابطة للحياة المشتركة والنسل.</li>
-                <li><strong>المادة 4:</strong> يحق للخاطب استرداد المهر أو قيمته عند العدول عن الخطبة وفق الشروط المحددة.</li>
-                <li><strong>المادة 12:</strong> يشترط في صحة عقد الزواج حضور شاهدين (رجلين أو رجل وامرأتين).</li>
-                <li><strong>المادة 16:</strong> تكمل أهلية الزواج في الفتى والفتاة ببلوغ الثامنة عشرة من العمر.</li>
-                <li><strong>المادة 20:</strong> يحق للمرأة التي لم تتزوج وبلغت 18 عامًا الزواج بإذن القاضي في حال عدم اعتراض الولي أو اعتراضه غير المبرر.</li>
+                <li><strong>المادة 1:</strong> الزواج عقد غايته إنشاء حياة مشتركة.</li>
+                <li><strong>المادة 12:</strong> يشترط في الزواج وجود شاهدين.</li>
+                <li><strong>المادة 20:</strong> يحق للمرأة الزواج دون ولي إذا بلغت 18 عامًا ولم يعترض الولي دون سبب مقنع.</li>
             </ul>
         </div>
 
-        <!-- البطاقة الثالثة: حقوق المرأة في قانون العمل -->
         <div class="card">
             <h2>حقوق المرأة في قانون العمل</h2>
             <ul>
-                <li><strong>المادة 130:</strong> تسري على النساء العاملات جميع النصوص المنظمة لتشغيل العمال دون تمييز.</li>
-                <li>القانون يراعي خصائص المرأة بمنع عملها ليلاً أو في الأعمال الضارة صحياً وأخلاقياً إلا بقرار خاص.</li>
-                <li>إجازة أمومة مدفوعة الأجر: 120 يوماً للطفل الأول، 90 يوماً للثاني، و75 يوماً للثالث.</li>
-                <li>عدم جواز فصل العاملة بسبب الحمل أو الولادة أو المرض المرتبط بهما.</li>
-                <li>توفير دار حضانة إذا كان عدد العاملات 100 أو أكثر في مكان واحد.</li>
+                <li><strong>المادة 130:</strong> تساوي المرأة بالرجل في حقوق العمل.</li>
+                <li>إجازة أمومة مدفوعة الأجر.</li>
+                <li>عدم فصل المرأة من العمل بسبب الحمل أو الولادة.</li>
+                <li>توفير حضانة في أماكن العمل التي تضم 100 امرأة أو أكثر.</li>
             </ul>
         </div>
     </div>
+    <!-- Navigation Buttons -->
+    <div class="pagination-buttons text-center mb-4">
+        <button class="btn btn-primary me-3" onclick="window.location.href='home.html'">السابق</button>
+        <button class="btn btn-primary" onclick="window.location.href='legal_consultations.html'">التالي</button>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h5>مواقع صديقة</h5>
+                <ul>
+                    <li><a href="http://ncw.gov.eg/" target="_blank">المجلس القومي للمرأة</a></li>
+                    <li><a href="https://www.unwomen.org/en/about-us/about-un-women" target="_blank">UN Women</a></li>
+                    <li><a href="https://www.feminist.com/" target="_blank">Feminist.com</a></li>
+                    <li><a href="http://haqqi.info/" target="_blank">Haqqi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>حول الموقع</h5>
+                <p>موقع حقوق المرأة السورية هو منصة تهدف إلى نشر الوعي حول حقوق المرأة وتعزيز المساواة بين الجنسين في المجتمع السوري.</p>
+            </div>
+            <div>
+                <h5>للتواصل معنا</h5>
+                <p>البريد الإلكتروني: <a href="mailto:info@womensrights.sy">info@womensrights.sy</a></p>
+                <p>يمكنك التواصل عبر صفحاتنا على مواقع التواصل الاجتماعي.</p>
+                <!-- إضافة أيقونات التواصل الاجتماعي -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="img/facebook-icon.png" alt="Facebook" />
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="img/twitter-icon.png" alt="Twitter" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="img/instagram-icon.png" alt="Instagram" />
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="img/linkedin-icon.png" alt="LinkedIn" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
